@@ -168,7 +168,7 @@ def main():
 			# checking for FPS with exif tool. On windows it must be paced in the
 			# user directory. If the FPS line is not found we take the subtitle with
 			# the best ranking
-			if platform.system() == 'Linux':
+			if platform.system() == 'Linux' or platform.system() == 'Darwin':
 				exif = "exiftool " + "'" + f + "'"
 			if platform.system() == 'Windows':
 				exif = os.path.expanduser("~") + "\\" "exiftool.exe " + "\"" + f + "\""
